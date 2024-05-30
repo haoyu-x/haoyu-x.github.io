@@ -90,6 +90,44 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+
+
+		
+           <tr onmouseout="npil_stop()" onmouseover="npil_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='npil_image'>
+		<img src='spin.gif' width="170" height="90"></div>
+                <img src='spin.gif' width="170" height="90">
+              </div>
+              <script type="text/javascript">
+                function npil_start() {
+                  document.getElementById('npil_image').style.opacity = "1";
+                }
+
+                function npil_stop() {
+                  document.getElementById('npil_image').style.opacity = "0";
+                }
+                npil_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:85%;vertical-align:middle">
+              <a href="https://open-world-mobilemanip.github.io/" >
+                <papertitle>SPIN: Simultaneous Perception, Interaction and Navigation</papertitle>
+              </a>
+              <br>
+              Shagun Uppal, Ananye Agarwal,<strong>Haoyu Xiong</strong>, Kenneth Shaw, Deepak Pathak   
+
+              <br>
+	      CVPR 2024
+              <br>
+		Sim2real mobile manipulation with a 2-DOF active camera. All with a single end-to-end neural network.
+		    <p></p>
+              <a href="https://spin-robot.github.io/">website</a>     
+
+            </td>
+          </tr>
+
 		
            <tr onmouseout="npil_stop()" onmouseover="npil_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
