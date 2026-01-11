@@ -111,54 +111,29 @@ h1 {
 }
 
 /**************************************************/
-/* Section buttons. */
+/* Section styling */
 
-#menu {
-  display: flex;
+.section {
+  margin-top: 2.5em;
 }
 
-.menu-item {
-  float: left;
-  margin-right: 2em;
+.section:first-of-type {
+  margin-top: 0.3em;
 }
 
-h2 {
+.section-title {
   font-size: 1.6em;
-  line-height: 2.4em;
-  margin-top: 0.5em;
-  color: #a0a8b0;
-}
-
-.selected h2 {
+  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
   color: #150c21;
 }
 
-.button {
-  display: inline-block;
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: #a0a8b0;
-  font-size: 1.6em;
-  line-height: 2.4em;
-  margin-top: 0.5em;
-  margin-right: 1em;
-  float: left;
-  padding: 0;
+.section-content {
+  padding-bottom: 0;
 }
 
-.button:hover {
-  color: #150c21;
-}
-
-.button:active,
-.button.is-checked {
-  color: #150c21;
-}
-
-.button-group:after {
-  content: '';
-  display: block;
+.clearfix {
   clear: both;
 }
 
@@ -305,10 +280,9 @@ strong {
 
 #footer {
   color: #a0a8b0;
-  position: absolute;
-  bottom: 0;
   line-height: 2.5em;
   width: 100%;         /* Make it full width */
   text-align: center;  /* Center the text */
-  left: 0;            /* Align from the left edge */
+  margin-top: 4em;
+  padding-bottom: 2em;
 }
