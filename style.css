@@ -277,6 +277,12 @@ h3 a:hover {
   font-weight: 400;
 }
 
+.haoyu-name {
+  font-family: 'Asap', roboto, sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+
 strong {
   font-weight: 700; /* or 'bold' */
 }
