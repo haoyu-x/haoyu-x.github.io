@@ -98,7 +98,7 @@ h1 {
 }
 
 #intro-image {
-  margin: 2em 0 0 2em;
+  margin: 5.5em 0 0 2em;
   width: 12em;
   height: 12em;
   float: left;
@@ -269,6 +269,12 @@ h3 a:hover {
 .project-description {
   width: 80%;
   float: left;
+}
+
+.title-like-name {
+  font-family: 'Asap', roboto, sans-serif;
+  color: #333333;
+  font-weight: 400;
 }
 
 strong {
