@@ -167,6 +167,11 @@ h1 {
   color: #a0a8b0;
 }
 
+.list-item.news b {
+  color: #a0a8b0;
+  font-weight: 700;
+}
+
 /**************************************************/
 /* Gallery of 3 preview videos. */
 
