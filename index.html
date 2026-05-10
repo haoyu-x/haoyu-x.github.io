@@ -25,6 +25,9 @@
   <!-- Custom Style -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- Scramble Script by Jeff Donahue -->
+  <script src="js/scramble.js"></script>
+
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,16 +47,13 @@
         <h1>Haoyu Xiong</h1>
         <p>
 		    I am a PhD student in the <a href="https://www.eecs.mit.edu/">Department of EECS</a> at <a href="https://web.mit.edu/">MIT</a>, advised by Prof. <a href="https://groups.csail.mit.edu/vision/torralbalab/">Antonio Torralba</a> and Prof. <a href="https://yilundu.github.io/">Yilun Du</a>.
-        </p>
-        <p>
-        Before joining MIT, I was fortunate to work with Prof. <a href="https://shurans.github.io/">Shuran Song</a> at <a href="https://src.stanford.edu/">Stanford University</a> and Prof. <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a> at <a href="https://www.cs.cmu.edu/">Carnegie Mellon University</a>. 
-        </p>
+        <!-- </p>
+        <p> -->
         My research focuses at the intersection of Robotics and Machine Learning. I care about real-world robot manipulation.
         </p>
-        I'm open to collaboration. If you are interested in (video) world modeling / policy learning, data-centric robot system (electronic/mechanical) design, feel free to email me.
-        
+        Before joining MIT, I was fortunate to work with Prof. <a href="https://shurans.github.io/">Shuran Song</a> at <a href="https://src.stanford.edu/">Stanford University</a> and Prof. <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a> at <a href="https://www.cs.cmu.edu/">Carnegie Mellon University</a>. 
         </p>
-
+  
 
 		  
         <div id="more-bio" style="display: None">
@@ -67,11 +67,22 @@
         <a href="https://scholar.google.com/citations?user=iGfCCEYAAAAJ&hl=en&oi=ao">G. Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://github.com/haoyu-x">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://www.linkedin.com/in/haoyu-xiong-03b122174/">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://x.com/intent/follow?original_referer=https%3A%2F%2Fhaoyu-x.github.io%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5EHaoyu_Xiong_&screen_name=Haoyu_Xiong_">Twitter</a>
+        <a href="https://x.com/intent/follow?original_referer=https%3A%2F%2Fhaoyu-x.github.io%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5EHaoyu_Xiong_&screen_name=Haoyu_Xiong_">Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#" onClick="emailScramble.initAnimatedBubbleSort();return false;">Email</a>
         <br><br>
-        haoyux [at] csail.mit.edu
-        <!-- <br><br> -->
+        <span id="email" style="display:inline;"><noscript><i>Please enable Javascript to view</i></noscript></span>
+        <script>
+          emailScramble = new scrambledString(document.getElementById('email'),
+              'emailScramble', '.chdxial.uaye@sotuim',
+              [13,8,1,19,6,15,2,12,17,5,10,4,18,7,9,3,16,20,11,14]);
+          document.getElementById('email').innerHTML = emailScramble.string;
+        </script>
+        <br><br>
         </p>
+              I'm open to collaboration. If you are interested in (video) world modeling / policy learning, data-centric robot system (electronic/mechanical) design, feel free to email me.
+        
+        </p>
+
       </div>
       <div id="intro-image">
         <img src="images/headshot.jpeg" style="margin-top: 0px; margin-bottom: -100px; width: 100%; height: auto; border-radius: 10px;" alt="Haoyu Xiong">

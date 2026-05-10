@@ -172,6 +172,12 @@ h1 {
   font-weight: 700;
 }
 
+#email, #email a {
+  font-size: 1em;
+  font-style: normal;
+  line-height: 1.5em;
+}
+
 /**************************************************/
 /* Gallery of 3 preview videos. */
 
