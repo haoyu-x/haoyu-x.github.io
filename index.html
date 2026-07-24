@@ -79,6 +79,19 @@
 		  document.getElementById('email').innerHTML = emailScramble.string;
 		</script>
         <br><br>
+        Research opportunities <a href="#" onClick="toggle_opportunities();return false;">[...]</a>
+        <div id="opportunities" style="display: none">
+          <p>
+            I’m always excited to collaborate with and mentor students who are passionate about robotics. Our lab is committed to full-stack robotics research. If you’re interested in designing novel hardware systems (e.g., multi-finger robot hands and mobile manipulators) and developing better methods for learning visuomotor skills for these systems (e.g., world action models), feel free to email me with your CV attached.
+          </p>
+        </div>
+        <script>
+          function toggle_opportunities() {
+            var e = document.getElementById('opportunities');
+            e.style.display = (e.style.display === 'none') ? 'block' : 'none';
+          }
+        </script>
+        <br><br>
         <!-- </p>
               I'm open to collaboration. If you are interested in (video) world modeling / policy learning, data-centric robot system (electronic/mechanical) design, feel free to email me.
         
