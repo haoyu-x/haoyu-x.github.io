@@ -130,13 +130,21 @@ h1 {
   width: auto;
 }
 
-/* Even out the visible gap above each section title. */
-.section:has(.news-list) + .section {
-  margin-top: 2.45em;
+/* Match the space above and below every section title to Blog's. */
+#highlights {
+  margin-top: 1em;
 }
 
-#filters {
-  padding-top: 0.25em;
+#highlights .section-title {
+  margin-bottom: calc(0.5em + 3px);
+}
+
+#news {
+  margin-top: calc(2.5em + 5px);
+}
+
+#research .section-content {
+  margin-top: -20px;
 }
 
 .section-title {
