@@ -48,16 +48,18 @@ table {
 
 #body{
   font-family: 'Asap', roboto, sans-serif;
-  font-size: 20px;
+  font-size: 1em;
   line-height: 1.5em;
   color: #150c21;
 }
 
 #main {
-  width: 45em;
+  max-width: 44em;
   margin: 0px auto;
   position: relative;
   min-height: 100vh;
+  padding: 0 1.25em;
+  box-sizing: content-box;
 }
 
 a {
@@ -75,12 +77,12 @@ i {
 }
 
 b {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h1 {
   font-size: 2.4em;
-  line-height: 3em;
+  line-height: 2.4em;
   font-weight: 500;
 }
 
@@ -93,16 +95,18 @@ h1 {
 }
 
 #intro-text {
-  width: 40em;
+  width: 30em;
   float: left;
 }
 
 #intro-image {
-  margin: 5.5em 0 0 2em;
+  /* Top margin clears the h1 so the photo aligns with the first paragraph. */
+  margin: 5.95em 0 0 2em;
   width: 12em;
   height: 12em;
   float: left;
   overflow: hidden;
+  flex-shrink: 0;
   /* border-radius: 1em; */
 }
 
@@ -113,21 +117,12 @@ h1 {
 /**************************************************/
 /* Section styling */
 
-/* Keep content from News down the same width. */
-#opportunities, .section, #footer {
-  width: 37.8em;
-}
-
 .section {
   margin-top: 2.5em;
 }
 
 .section:first-of-type {
   margin-top: 0.3em;
-}
-
-#highlights {
-  width: auto;
 }
 
 /* Match the space above and below every section title to Blog's. */
@@ -140,15 +135,15 @@ h1 {
 }
 
 #news {
-  margin-top: calc(2.5em + 5px);
+  margin-top: 2.75em;
 }
 
 #research .section-content {
-  margin-top: -20px;
+  margin-top: -1em;
 }
 
 .section-title {
-  font-size: 1.6em;
+  font-size: 1.15em;
   line-height: 1.5em;
   margin-top: 0;
   margin-bottom: 0.5em;
@@ -296,7 +291,7 @@ h3 {
 }
 
 h3 a {
-  color: #150c21;
+  color: rgb(20, 110, 190);
 }
 
 h3 a:hover {
@@ -340,6 +335,7 @@ strong {
 #footer {
   color: #a0a8b0;
   line-height: 2.5em;
+  width: 100%;         /* Make it full width */
   text-align: center;  /* Center the text */
   margin-top: 4em;
   padding-bottom: 2em;
@@ -354,9 +350,9 @@ strong {
   border: none;
   background: none;
   font-family: inherit;
-  font-weight: 700;
+  font-weight: 600;
   color: #a0a8b0;
-  font-size: 1.6em;
+  font-size: 1.15em;
   line-height: 1.5em;
   margin-bottom: 0.5em;
   margin-right: 1em;

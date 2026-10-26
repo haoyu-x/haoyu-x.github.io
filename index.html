@@ -262,7 +262,7 @@
           <div class="project-description">
             <h3><a href="https://egoverse.ai/">EgoVerse: An Egocentric Human Dataset for Robot Learning from Around the World</a></h3>
             <p>
-              EgoVerse team
+              <a href="#" id="egoverse-team" style="color: rgb(0, 0, 0);" onClick="toggle_egoverse_authors();return false;">EgoVerse team</a><span id="egoverse-authors" style="display: none">Ryan Punamiya, Simar Kareer, Zeyi Liu, Josh Citron, Ri-Zhao Qiu, Xiongyi Cai, Alexey Gavryushin, Jiaqi Chen, Davide Liconti, Lawrence Y. Zhu, Patcharapong Aphiwetsa, Baoyu Li, Aniketh Cheluva, Pranav Kuppili, Yangcen Liu, Dhruv Patel, Aidan Gao, Hye-Young Chung, Ryan Co, Renee Zbizika, Jeff Liu, Xiaomeng Xu, <span class="haoyu-name">Haoyu Xiong</span>, Geng Chen, Sebastiano Oliani, Wenkai Xuan, Chenyu Yang, Xi Wang, James Fort, Richard Newcombe, Josh Gao, Jason Chong, Garrett Matsuda, Aseem Doriwala, Marc Pollefeys, Robert Katzschmann, Xiaolong Wang, Shuran Song, Judy Hoffman, Danfei Xu</span>
               <br>
               <i>RSS 2026</i><br>
 
@@ -364,6 +364,11 @@
     </div>
 
     <script>
+      function toggle_egoverse_authors() {
+        document.getElementById('egoverse-team').style.display = 'none';
+        document.getElementById('egoverse-authors').style.display = 'inline';
+      }
+
       function filter_research(category) {
         document.querySelectorAll('#filters .button').forEach(function (b) {
           b.classList.toggle('is-checked', b.dataset.filter === category);
