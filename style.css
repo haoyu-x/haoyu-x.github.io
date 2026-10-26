@@ -113,12 +113,30 @@ h1 {
 /**************************************************/
 /* Section styling */
 
+/* Keep content from News down the same width. */
+#opportunities, .section, #footer {
+  width: 37.8em;
+}
+
 .section {
   margin-top: 2.5em;
 }
 
 .section:first-of-type {
   margin-top: 0.3em;
+}
+
+#highlights {
+  width: auto;
+}
+
+/* Even out the visible gap above each section title. */
+.section:has(.news-list) + .section {
+  margin-top: 2.45em;
+}
+
+#filters {
+  padding-top: 0.25em;
 }
 
 .section-title {
@@ -314,7 +332,6 @@ strong {
 #footer {
   color: #a0a8b0;
   line-height: 2.5em;
-  width: 100%;         /* Make it full width */
   text-align: center;  /* Center the text */
   margin-top: 4em;
   padding-bottom: 2em;
