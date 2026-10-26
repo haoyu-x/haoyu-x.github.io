@@ -182,7 +182,10 @@
 
     <!-- Research Section -->
     <div class="section">
-      <h2 class="section-title"><b>Research</b></h2>
+      <div id="filters" class="button-group">
+        <button class="button is-checked" data-filter="selected">Selected Work</button>
+        <button class="button" data-filter="publication">All Research</button>
+      </div>
       
       <div class="section-content">
 
@@ -202,9 +205,9 @@
           <div class="clearfix"></div>
         </div>
 
-        <div class="list-item publication">
+        <div class="list-item publication selected">
           <a href="https://b-spline-policy.github.io/" class="thumbnail">
-            <img src="images/bsp.gif" alt="B-spline Policy" />
+            <img src="images/bsp_still.jpg" data-hover="images/bsp.gif" alt="B-spline Policy" />
           </a>
           <div class="project-description">
             <h3><a href="https://b-spline-policy.github.io/">B-spline Policy: Accelerating Manipulation Policies via B-spline Action Representations</a></h3>
@@ -234,7 +237,25 @@
           <div class="clearfix"></div>
         </div>
 
-        <div class="list-item publication">
+        <div class="list-item publication selected">
+          <a href="https://vision-in-action.github.io/" class="thumbnail">
+            <img src="images/via_robot.jpg" data-hover="images/via_teaser.gif" alt="Vision in Action: Learning Active Perception from Human Demonstrations" />
+          </a>
+          <div class="project-description">
+            <h3><a href="https://vision-in-action.github.io/">Vision in Action: Learning Active Perception from Human Demonstrations</a>
+            </h3>
+            <p>
+              <span class="haoyu-name">Haoyu Xiong</span>, Xiaomeng Xu, Jimmy Wu, Yifan Hou, Jeannette Bohg, Shuran Song
+              <br>
+              <i>CoRL 2025</i><br>
+              <a href="https://vision-in-action.github.io/">Webpage</a>
+              <br>
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="list-item publication selected">
           <a href="https://egoverse.ai/" class="thumbnail">
             <img src="images/egoverse.svg" alt="EgoVerse" style="width: 70%; height: auto; margin-left: 15%;" />
           </a>
@@ -252,32 +273,16 @@
           <div class="clearfix"></div>
         </div>
 
-        <div class="list-item publication">
-          <a href="https://vision-in-action.github.io/" class="thumbnail">
-            <img src="images/via_teaser.gif" alt="Vision in Action: Learning Active Perception from Human Demonstrations" />
-          </a>
-          <div class="project-description">
-            <h3><a href="https://vision-in-action.github.io/">Vision in Action: Learning Active Perception from Human Demonstrations</a>
-            </h3>
-            <p>
-              <span class="haoyu-name">Haoyu Xiong</span>, Xiaomeng Xu, Jimmy Wu, Yifan Hou, Jeannette Bohg, Shuran Song
-              <br>
-              <i>CoRL 2025</i><br>
-              <a href="https://vision-in-action.github.io/">Webpage</a>
-              <br>
-            </p>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-
-        <div class="list-item publication">
+        <div class="list-item publication selected">
           <a href="https://open-world-mobilemanip.github.io/" class="thumbnail">
-            <img src="images/door.gif" alt="Door Opening Project" />
+            <img src="images/door_still.jpg" data-hover="images/door.gif" alt="Door Opening Project" />
           </a>
           <div class="project-description">
             <h3><a href="https://open-world-mobilemanip.github.io/">Adaptive Mobile Manipulation for Articulated Objects In the Open World</a></h3>
             <p>
               <span class="haoyu-name">Haoyu Xiong</span>, Russell Mendonca, Kenny Shaw, Deepak Pathak
+              <br>
+              Featured in <a href="https://www.nature.com/immersive/d41586-024-00608-5/index.html"><strong><span style="color: rgb(255, 100, 100);">Nature</span></strong></a> "Images of the Month" 2024
               <br>
               <a href="https://open-world-mobilemanip.github.io/">Webpage</a>
               <br>
@@ -320,9 +325,9 @@
           <div class="clearfix"></div>
         </div>
 
-        <div class="list-item publication">
+        <div class="list-item publication selected">
           <a href="https://www.robotube.org/" class="thumbnail">
-            <img src="images/robotube.gif" alt="JUICER" />
+            <img src="images/robotube_logo.png" alt="RoboTube" style="object-fit: contain;" />
           </a>
           <div class="project-description">
             <h3><a href="https://www.robotube.org/">RoboTube: Learning Household Manipulation from Human Videos with Simulated Twin Environments</a></h3>
@@ -337,9 +342,9 @@
           <div class="clearfix"></div>
         </div>
 
-        <div class="list-item publication">
+        <div class="list-item publication selected">
           <a href="#" class="thumbnail">
-            <img src="images/LbW.gif" alt="lbw" />
+            <img src="images/LbW_still.jpg" data-hover="images/LbW.gif" alt="lbw" />
           </a>
           <div class="project-description">
             <h3><a href="https://www.pair.toronto.edu/lbw-kp/">Learning by Watching: Physical Imitation of Manipulation Skills from Human Videos</a></h3>
@@ -357,6 +362,28 @@
         </div>
       </div>
     </div>
+
+    <script>
+      function filter_research(category) {
+        document.querySelectorAll('#filters .button').forEach(function (b) {
+          b.classList.toggle('is-checked', b.dataset.filter === category);
+        });
+        document.querySelectorAll('.list-item.publication').forEach(function (e) {
+          e.style.display = e.classList.contains(category) ? '' : 'none';
+        });
+      }
+      document.querySelectorAll('#filters .button').forEach(function (b) {
+        b.addEventListener('click', function () { filter_research(b.dataset.filter); });
+      });
+      filter_research('selected');
+
+      document.querySelectorAll('img[data-hover]').forEach(function (img) {
+        var still = img.src;
+        new Image().src = img.dataset.hover;
+        img.addEventListener('mouseenter', function () { img.src = img.dataset.hover; });
+        img.addEventListener('mouseleave', function () { img.src = still; });
+      });
+    </script>
 
     <div id="footer">
       <a href="https://github.com/andyzeng/andyzeng.github.io">Template</a> borrowed from <a

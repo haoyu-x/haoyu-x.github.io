@@ -319,3 +319,26 @@ strong {
   margin-top: 4em;
   padding-bottom: 2em;
 }
+
+/**************************************************/
+/* Filter buttons for selected work vs. all research. */
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-weight: 700;
+  color: #a0a8b0;
+  font-size: 1.6em;
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
+  margin-right: 1em;
+  padding: 0;
+}
+
+.button:hover,
+.button.is-checked {
+  color: #150c21;
+}
