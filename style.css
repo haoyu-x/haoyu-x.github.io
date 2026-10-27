@@ -291,11 +291,11 @@ h3 {
 }
 
 h3 a {
-  color: rgb(20, 110, 190);
+  color: #1c1040;
 }
 
 h3 a:hover {
-  color: rgb(20, 110, 190);
+  color: #1c1040;
 }
 
 .publication {
